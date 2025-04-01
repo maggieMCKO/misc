@@ -1,7 +1,7 @@
 # download the hyphy def file
 ```bash
 # can mkdir XX; cd XX first
-curl -O https://raw.githubusercontent.com/maggieMCKO/misc/main/absrel/setup/hyphy_man2.def
+wget https://raw.githubusercontent.com/maggieMCKO/misc/main/absrel/setup/hyphy_man2.def
 ```
 
 # build an apptainer image
