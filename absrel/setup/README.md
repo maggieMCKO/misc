@@ -30,15 +30,20 @@ apptainer exec ${image}  hyphy absrel --help
 
 ```
 
-# temple script
+# template script
 ```bash
-# remember to module load apptainer
+# Load the required module for Apptainer
+module load apptainer
 
+# Define input variables
 ALIGN=$SAMPLE
 TREE=$TREE
 OUTPUT=$tmp_dir/$stem.ABSREL_srv.json
 OUTPUTLOG=$tmp_dir/$stem.ABSREL_srv.log
 
+# Set the path to the Apptainer image
 export image="$HOME/hyphy_v2.5.69.sif"
+
+# Execute the ABSREL analysis
 apptainer exec ${image} sh -c "cd $tmp_dir && hyphy absrel --alignment $ALIGN --tree $TREE --output $OUTPUT --srv Yes"
 ```
