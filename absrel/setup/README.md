@@ -45,5 +45,5 @@ OUTPUTLOG=$tmp_dir/$stem.ABSREL_srv.log
 export image="$HOME/hyphy_v2.5.69.sif"
 
 # Execute the ABSREL analysis
-apptainer exec ${image} sh -c "cd $tmp_dir && hyphy absrel --alignment $ALIGN --tree $TREE --output $OUTPUT --srv Yes"
+apptainer exec ${image} sh -c "cd $tmp_dir && hyphy absrel --alignment $ALIGN --tree $TREE --output $OUTPUT --srv Yes --code Universal ENV=TOLERATE_NUMERICAL_ERRORS=1"
 ```
