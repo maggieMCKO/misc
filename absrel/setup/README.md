@@ -7,7 +7,7 @@ wget https://raw.githubusercontent.com/maggieMCKO/misc/main/absrel/setup/hyphy_m
 # build an apptainer image
 ## in scc legacy cluster - software stack `scc-lmod`
 ```bash
-module load rev/23.12 apptainer/1.1.9
+module load apptainer/1.3.4
 # or search first by 
 # module spider apptainer
 
@@ -16,7 +16,7 @@ apptainer build hyphy_v2.5.69.sif hyphy_man3.def
 
 ## in scc new cluster (project id) - software stack `scc-lmod`
 ```bash
-module load gcc/13.2.0 apptainer/1.2.5
+module load apptainer/1.3.4
 # or search first by 
 # module spider apptainer
 
@@ -33,7 +33,7 @@ apptainer exec ${image}  hyphy absrel --help
 # template script
 ```bash
 # Load the required module for Apptainer
-module load apptainer
+module load apptainer/1.3.4
 
 # Define input variables
 ALIGN=$SAMPLE
