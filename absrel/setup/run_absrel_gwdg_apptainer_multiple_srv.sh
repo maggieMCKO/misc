@@ -8,7 +8,8 @@
 # wd: /user/mko/u14219/findgene
 module purge
 # module load rev/23.12 apptainer/1.1.9
-module load gcc/13.2.0 apptainer/1.2.5
+# module load gcc/13.2.0 apptainer/1.2.5
+module load apptainer/1.3.4
 
 export singularity_image="$HOME/findgene/hyphy_v2.5.69.sif"
 
