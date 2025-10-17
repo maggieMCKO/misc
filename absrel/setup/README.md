@@ -45,5 +45,9 @@ OUTPUTLOG=$tmp_dir/$stem.ABSREL_srv.log
 export image="$HOME/hyphy_v2.5.69.sif"
 
 # Execute the ABSREL analysis
-apptainer exec ${image} sh -c "cd $tmp_dir && hyphy absrel --alignment $ALIGN --tree $TREE --output $OUTPUT --srv Yes --code Universal ENV=TOLERATE_NUMERICAL_ERRORS=1"
+apptainer exec --bind /scratch-scc:/scratch-scc ${image} sh -c "cd $tmp_dir && hyphy absrel --alignment $ALIGN --tree $TREE --output $OUTPUT --srv Yes"
 ```
+
+# output tree topology related discussions
+- https://github.com/veg/hyphy/issues/1399
+- https://github.com/veg/hyphy/issues/1790
